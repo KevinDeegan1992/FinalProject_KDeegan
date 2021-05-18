@@ -25,15 +25,21 @@ from scipy.stats import zscore
 
 #sorted_values = df.sort_values(by="Price",ascending=False)
 
-housing_subset = ["Date",
-                  "Price",
-                  "Address",
-                  "County",
-                  ]
+#housing_subset = ["Date",
+                  #"Price",
+                  #"Address",
+                  #"County",
+                  #]
 
-df = pd.read_csv('House_Prices.csv', usecols=housing_subset, nrows=57747)
-print(df.columns)
+df = pd.read_csv('House_Prices.csv')
+print(df.head())
 
-sorting_price = df.sort_values(by="Price", ascending=True)
+#print(df.describe())
+
+df['County'].value_counts().plot(kind='bar')
+plt.title('Number of Houses') #Simple way of visualising the amount of houses across the country of Ireland, with Dublin reaching over 140000 houses
+plt.xlabel('County')
+plt.ylabel('Housing Units')
+plt.show()
 
 
