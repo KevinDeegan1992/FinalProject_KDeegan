@@ -81,6 +81,3 @@ sns.lineplot(x = df['Price'].head(5), y = df['County'].head(5) )
 
 
 
-
-
-
