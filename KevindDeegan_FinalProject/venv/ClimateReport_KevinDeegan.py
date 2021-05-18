@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import csv
 
-csv.reader('europe_dataset.csv')
-
-print(csv.reader(type))
-
+with open('europe_dataset.csv', newline='') as File:
+    reader = csv.reader(File)
+    for row in reader:
+        print(row)
