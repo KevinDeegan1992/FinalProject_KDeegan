@@ -1,8 +1,13 @@
 import pandas as pd
 import numpy as np
+import os
+import glob
 import csv
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import zscore
 
-with open('europe_dataset.csv', newline='') as File:
-    reader = csv.reader(File)
-    for row in reader:
-        print(row)
+df = pd.read_csv('Climate_COVID.csv')
+
+df = df.round(3)
+
