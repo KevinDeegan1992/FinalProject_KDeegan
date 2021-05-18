@@ -13,7 +13,8 @@ print(df.head())
 print(df.describe())
 
 df['County'].value_counts().plot(kind='bar')
-plt.title('Number of Houses') #Simple way of visualising the amount of houses across the country of Ireland, with Dublin reaching over 140000 houses
+plt.title('Number of Houses') #Simple way of visualising the amount of houses across the country of Ireland, with Dublin reaching over 140000 houses.
+                              #We can see that the major cities will be key to narrowing down our analysis.
 plt.xlabel('County')
 plt.ylabel('Housing Units')
 plt.show()
